@@ -2,6 +2,7 @@ package backTobasics;
 
 public class GameClass {
 
+	/*
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int low, high, guesses;
@@ -9,9 +10,16 @@ public class GameClass {
 		System.out.println("You just lost");
 
 	}
+	*/
 	
-	public static PromptToPlay {
+	public GameClass ()	{
 		
+	}
+	
+	public boolean PromptToPlay (boolean i) 	{
+		
+		return false;
+		https://github.com/wredd09/Java-Basic.git
 	}
 
 }
