@@ -21,9 +21,11 @@ public class GameClass {
 	}
 
 	public void play() {
-		int low, high;
+		int low, high, guesses;
+		System.out.println("What do you want set as your low number?");
+		low = scanner.nextInt();
+		System.out.println("What do you want to set as your high number?");
 		
-		
-		
+	
 	}
 }
