@@ -6,7 +6,7 @@ public class HelloWorld {
 		
 		GameClass gc = new GameClass();
 		
-		while (gc.PromptToPlay(true)) {
+		while (gc.PromptToPlay()) {
 			gc.play();
 		}
 		
