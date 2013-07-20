@@ -1,25 +1,22 @@
 package backTobasics;
 
+import java.util.Scanner;
+
 public class GameClass {
 
-	/*
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int low, high, guesses;
-		System.out.println("This is the game.");
-		System.out.println("You just lost");
-
-	}
-	*/
+	private Scanner in;
 	
 	public GameClass ()	{
-		
+		in = new Scanner(System.in);
 	}
 	
 	public boolean PromptToPlay (boolean i) 	{
-		
+		System.out.println("Do you want to play the number game? (enter Y for yes, or anyhting else for no)");
+		String user_input = in.nextLine();
+		if (user_input.equalsIgnoreCase("Y"))	{
+			return true;
+		}
 		return false;
-		https://github.com/wredd09/Java-Basic.git
 	}
 
 }
