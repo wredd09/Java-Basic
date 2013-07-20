@@ -11,7 +11,8 @@ public class GameClass {
 	}
 	
 	public boolean PromptToPlay (boolean i) 	{
-		System.out.println("Do you want to play the number game? (enter Y for yes, or anyhting else for no)");
+		System.out.println("Do you want to play the number game? "
+				+ "(enter Y for yes, or anyhting else for no)");
 		String user_input = scanner.nextLine();
 		if (user_input.equalsIgnoreCase("Y"))	{
 			return true;
@@ -20,8 +21,11 @@ public class GameClass {
 	}
 
 	public void play() {
-		System.out.println("Think of a number between 0 and 100");
-		System.out.println("Are you ready?");
+		int low, high, guesses;
+		System.out.println("What do you want set as your low number?");
+		low = scanner.nextInt();
+		System.out.println("What do you want to set as your high number?");
 		
+	
 	}
 }
