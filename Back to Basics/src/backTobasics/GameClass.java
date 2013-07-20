@@ -10,7 +10,7 @@ public class GameClass {
 		scanner = new Scanner(System.in);
 	}
 	
-	public boolean PromptToPlay (boolean i) 	{
+	public boolean PromptToPlay () 	{
 		System.out.println("Do you want to play the number game? "
 				+ "(enter Y for yes, or anyhting else for no)");
 		String user_input = scanner.nextLine();
@@ -23,9 +23,12 @@ public class GameClass {
 	public void play() {
 		int low, high, guesses;
 		System.out.println("What do you want set as your low number?");
-		low = scanner.nextInt();
+		low = scanner.nextInt(); 
+		scanner.nextLine();
 		System.out.println("What do you want to set as your high number?");
-		
+		high = scanner.nextInt();
+		scanner.nextLine();
+		System.out.println();
 	
 	}
 }
