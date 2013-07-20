@@ -1,13 +1,17 @@
 package backTobasics;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class GameClass {
 
 	private Scanner scanner;
+	private Random random;
 	
 	public GameClass ()	{
 		scanner = new Scanner(System.in);
+		random = new Random();
+		play();
 	}
 	
 	public boolean PromptToPlay () 	{
@@ -29,6 +33,9 @@ public class GameClass {
 		high = scanner.nextInt();
 		scanner.nextLine();
 		System.out.println();
+		int n = high - low;
+		int randomnumber = random.nextInt();
+		
 	
 	}
 }
