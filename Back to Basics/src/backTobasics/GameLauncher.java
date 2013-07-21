@@ -32,7 +32,7 @@ public class GameLauncher {
 				ng = new ShellmanNumberGame();
 			}
 			ng.play();
-		};
+		}
 		System.exit(0);
 	}
 }
