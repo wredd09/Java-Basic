@@ -10,6 +10,7 @@ public class NumberGame {
 	
 	public NumberGame() {
 		scanner = new Scanner(System.in);
+		random = new Random();
 	}
 	
 	public boolean PromptToPlay () 	{
