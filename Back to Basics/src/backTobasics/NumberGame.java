@@ -1,10 +1,12 @@
 package backTobasics;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class NumberGame {
 
-	private Scanner scanner;
+	protected Scanner scanner;
+	protected Random random;
 	
 	public NumberGame() {
 		scanner = new Scanner(System.in);
