@@ -14,9 +14,9 @@ public class NumberGame {
 	
 	public boolean PromptToPlay () 	{
 		System.out.println("Do you want to play the number game? "
-				+ "(enter Y for yes, or anything else for no)");
+				+ "(enter Y or Yes for yes, or anything else for no)");
 		String user_input = scanner.nextLine();
-		if (user_input.equalsIgnoreCase("Y"))	{
+		if (user_input.trim().equalsIgnoreCase("Y") || user_input.trim().equalsIgnoreCase("Yes"))	{
 			return true;
 		}
 		return false;

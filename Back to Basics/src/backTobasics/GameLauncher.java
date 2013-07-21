@@ -21,12 +21,12 @@ public class GameLauncher {
 				System.out.println("Which version of the Number Game would you like to play?");
 				System.out.println("Enter W for Will's version or I for Ian's.");
 				user_input = scanner.nextLine();
-				if (!user_input.equalsIgnoreCase("W") && !user_input.equalsIgnoreCase("I")) {
+				if (!user_input.trim().equalsIgnoreCase("W") && !user_input.trim().equalsIgnoreCase("I")) {
 					test = true;
 				}
 			} while (test);
 			
-			if (user_input.equalsIgnoreCase("W")) {
+			if (user_input.trim().equalsIgnoreCase("W")) {
 				ng = new ReddNumberGame();
 			} else {
 				ng = new ShellmanNumberGame();
