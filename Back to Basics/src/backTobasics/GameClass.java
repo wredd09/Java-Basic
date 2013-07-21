@@ -1,7 +1,7 @@
 package backTobasics;
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
+
 
 public class GameClass {
 
@@ -11,12 +11,11 @@ public class GameClass {
 	public GameClass ()	{
 		scanner = new Scanner(System.in);
 		random = new Random();
-		play();
 	}
 	
 	public boolean PromptToPlay () 	{
 		System.out.println("Do you want to play the number game? "
-				+ "(enter Y for yes, or anyhting else for no)");
+				+ "(enter Y for yes, or anything else for no)");
 		String user_input = scanner.nextLine();
 		if (user_input.equalsIgnoreCase("Y"))	{
 			return true;
@@ -34,7 +33,8 @@ public class GameClass {
 		scanner.nextLine();
 		System.out.println();
 		int n = high - low;
-		int randomnumber = random.nextInt();
+		int randomnumber = random.nextInt(n); 
+		System.out.println(randomnumber);
 		
 	
 	}
