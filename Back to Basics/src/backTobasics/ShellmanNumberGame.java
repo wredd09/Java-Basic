@@ -11,11 +11,9 @@ public class ShellmanNumberGame extends NumberGame {
 		System.out.println("Are you ready? (Enter anything when you are ready)");
 		scanner.nextLine();
 		
-		int low = 1, high = 100;
+		int low = 1, high = 100, num_tries = 1;
 		String user_input = "";
-		
 		boolean correct = false, bad_input = false;
-		int num_tries = 1;
 		
 		while (!correct)
 		{

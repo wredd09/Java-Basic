@@ -26,4 +26,21 @@ public class NumberGame {
 	public void play() {
 		/* To be filled in in each child class */
 	}
+	
+	protected int getIntFromUser() {
+		int userInt = 0;
+		boolean successful = true;
+		
+		do {
+			try {
+				userInt = Integer.parseInt(scanner.nextLine());
+				successful = true;
+			} catch (Exception e) {
+				successful = false;
+				System.out.println("That was an invalid input for an integer. ");
+			}
+		} while (!successful);
+		
+		return userInt;
+	}
 }

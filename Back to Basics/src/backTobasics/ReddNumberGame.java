@@ -16,10 +16,12 @@ public class ReddNumberGame extends NumberGame {
 	public int numbergenerator () {
 		int low, high, randomnumber; 
 		System.out.println("What do you want set as your low number?");
-		low = scanner.nextInt(); 
+		//low = scanner.nextInt(); 
+		low = getIntFromUser();
 		//scanner.nextLine();
 		System.out.println("What do you want to set as your high number?");
-		high = scanner.nextInt();
+		//high = scanner.nextInt();
+		high = getIntFromUser();
 		//scanner.nextLine();
 		System.out.println("low is " + low + ". High is " + high);
 		randomnumber = random.nextInt(high - low + 1); //WHOOOOO Comments
@@ -31,7 +33,8 @@ public class ReddNumberGame extends NumberGame {
 		int guess = 0;
 		int guesses = 0;
 		System.out.print("Guess a number ");
-		guess = scanner.nextInt();
+		//guess = scanner.nextInt();
+		guess = getIntFromUser();
 		System.out.println();
 		if (guess == randomnumber){
 			guesses++;
@@ -42,13 +45,12 @@ public class ReddNumberGame extends NumberGame {
 				guesses++;
 				if (guess < randomnumber){
 					System.out.print("Too low. Guess again ");
-					guess = scanner.nextInt();
-					System.out.println();
 				} else if (guess > randomnumber) {
 					System.out.print("Too high. Guess again ");
-					guess = scanner.nextInt();
-					System.out.println();
 				}
+				//guess = scanner.nextInt();
+				guess = getIntFromUser();
+				System.out.println();
 			} while (guess != randomnumber);
 		} 
 		
