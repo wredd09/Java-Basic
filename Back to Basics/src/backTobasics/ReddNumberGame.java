@@ -7,17 +7,55 @@ public class ReddNumberGame extends NumberGame {
 	}
 	
 	public void play() {
-		int low, high, guesses;
+		int randomnumber = 0, guesses = 0;
+		randomnumber = numbergenerator(randomnumber);
+		//System.out.println("random number is " + randomnumber);
+		guesses = actualgame(guesses, randomnumber);
+		System.out.println("It took you " + guesses + " Guesses");
+	}
+	
+	public int numbergenerator (int randomnumber) {
+		int low, high;
 		System.out.println("What do you want set as your low number?");
 		low = scanner.nextInt(); 
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.println("What do you want to set as your high number?");
 		high = scanner.nextInt();
-		scanner.nextLine();
-		System.out.println("");
-		int n = high - low;
-		int randomnumber = random.nextInt(n); 
-		System.out.println(randomnumber);
+		//scanner.nextLine();
+		System.out.println();
+		randomnumber = random.nextInt(high - low + 1); //WHOOOOO Comments
+		randomnumber = randomnumber + low;
+		return randomnumber;
+	}
+	
+	public int actualgame (int guesses, int randomnumber) {
+		int guess=0;
+		System.out.print("Guess a number ");
+		guess = scanner.nextInt();
+		System.out.println();
+		if (guess == randomnumber){
+			guesses++;
+			System.out.println("Lucky Guess!");
+			return guesses;
+		} else {
+			do {
+				guesses++;
+				if (guess < randomnumber){
+					System.out.print("Too low. Guess again ");
+					guess = scanner.nextInt();
+					System.out.println();
+				} else if (guess > randomnumber) {
+					System.out.print("Too high. Guess again ");
+					guess = scanner.nextInt();
+					System.out.println();
+				}
+			} while (guess != randomnumber);
+		} 
 		
+		if (guess == randomnumber) {
+			guesses++;
+			System.out.println("Got it!");
+		}
+		return guesses;
 	}
 }
