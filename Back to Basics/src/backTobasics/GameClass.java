@@ -24,9 +24,11 @@ public class GameClass {
 	}
 
 	public void play() {
-		int randomnumber = 0;
+		int randomnumber = 0, guesses = 0;
 		randomnumber = numbergenerator(randomnumber);
-		System.out.println("random number is " + randomnumber);
+		//System.out.println("random number is " + randomnumber);
+		guesses = actualgame(guesses, randomnumber);
+		System.out.println("It took you " + guesses + " Guesses");
 	}
 	
 	public int numbergenerator (int randomnumber) {
@@ -43,4 +45,34 @@ public class GameClass {
 		return randomnumber;
 	}
 	
+	public int actualgame (int guesses, int randomnumber) {
+		int guess=0;
+		System.out.print("Guess a number ");
+		guess = scanner.nextInt();
+		System.out.println();
+		if (guess == randomnumber){
+			guesses++;
+			System.out.println("Lucky Guess!");
+			return guesses;
+		} else {
+			do {
+				guesses++;
+				if (guess < randomnumber){
+					System.out.print("Too low. Guess again ");
+					guess = scanner.nextInt();
+					System.out.println();
+				} else if (guess > randomnumber) {
+					System.out.print("Too high. Guess again ");
+					guess = scanner.nextInt();
+					System.out.println();
+				}
+			} while (guess != randomnumber);
+		} 
+		
+		if (guess == randomnumber) {
+			guesses++;
+			System.out.println("Got it!");
+		}
+		return guesses;
+	}
 }
