@@ -38,7 +38,7 @@ public class GameClass {
 		System.out.println("What do you want to set as your high number?");
 		high = scanner.nextInt();
 		//scanner.nextLine();
-		System.out.println();
+		System.out.println("low is " + low + ". High is " + high);
 		randomnumber = random.nextInt(high - low + 1); //WHOOOOO Comments
 		randomnumber = randomnumber + low;
 		return randomnumber;
