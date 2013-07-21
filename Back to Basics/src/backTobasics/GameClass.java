@@ -24,18 +24,23 @@ public class GameClass {
 	}
 
 	public void play() {
-		int low, high, guesses;
+		int randomnumber = 0;
+		randomnumber = numbergenerator(randomnumber);
+		System.out.println("random number is " + randomnumber);
+	}
+	
+	public int numbergenerator (int randomnumber) {
+		int low, high;
 		System.out.println("What do you want set as your low number?");
 		low = scanner.nextInt(); 
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.println("What do you want to set as your high number?");
 		high = scanner.nextInt();
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.println();
-		int n = high - low;
-		int randomnumber = random.nextInt(n); 
-		System.out.println(randomnumber);
-		
-	
+		randomnumber = random.nextInt(high - low + 1); //WHOOOOO Comments
+		randomnumber = randomnumber + low;
+		return randomnumber;
 	}
+	
 }
