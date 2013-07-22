@@ -53,9 +53,10 @@ public class GameClass {
 	public static void play() {
 		Random random = new Random();
 		int [] randlowhigh = numbergenerator(random);
-		// next line is debug only
+		/* next line is debug only
 		System.out.println("rand low high " + randlowhigh[0] + " " + randlowhigh [1] 
-				+ " " + randlowhigh [2]);
+				+ " " + randlowhigh [2]); 
+				*/
 		int guesses = actualgame(randlowhigh);
 		if (guesses > 1) {
 			System.out.println("It took you " + guesses + " guesses.");
