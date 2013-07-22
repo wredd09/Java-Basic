@@ -86,8 +86,8 @@ public class GameClass {
 	public static int actualgame(int[] randlowhigh) {
 		int guess = 0, guesses = 0;
 		int [] currentlohi = new int [2];
-		currentlohi[0] = randlowhigh[1];
-		currentlohi[1] = randlowhigh[2];
+		currentlohi[0] = randlowhigh[1] - 1;
+		currentlohi[1] = randlowhigh[2] + 1;
 		System.out.print("Guess a number ");
 		guess = getInt();
 		System.out.println();
@@ -98,7 +98,7 @@ public class GameClass {
 			return guesses;
 		} else {
 			do {
-				if (guess >= currentlohi[0] && guess <= currentlohi[1]){
+				if (guess > currentlohi[0] && guess < currentlohi[1]){
 					if (guess < randlowhigh[0]) {
 						System.out.print("Too low. Guess again ");
 						currentlohi[0] = guess;
@@ -115,15 +115,9 @@ public class GameClass {
 				} else if (guess <= currentlohi[0] && currentlohi[0] != randlowhigh [1]){
 					System.out.println("I've already told you the number is greater than " 
 							+ currentlohi[0]);
-					if (guess == currentlohi[0]){
-						currentlohi[0] = guess;
-					}
 				} else if (guess >= currentlohi[1] && currentlohi[1] != randlowhigh [2]){
 					System.out.println("I've already told you the number is less than " 
 							+ currentlohi[1]);
-					if (guess == currentlohi[1]) {
-						currentlohi[1] = guess;
-					}
 				}
 				
 				guess = getInt();
